@@ -1,0 +1,585 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: -apple-system, sans-serif;
+}
+
+    :root{
+        --bg-color: #fff;
+        --snd-bg-color: #c8dff1;
+        --text-color: #000;
+        --main-color: #005b96;
+
+    }
+    
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+section {
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+
+/* Header Section Code*/
+
+.header {
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 5%;
+    background: var(--main-color);
+    backdrop-filter: blur(10px);
+    transition: all 0.4s ease;
+
+}
+.logo {
+    font-size: 3rem;
+    color: var(--bg-color);
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s ease;
+
+} 
+
+.logo:hover{
+        transform: scale(1.05);
+
+}
+.navbar a {
+    font-size: 1.9rem;
+    color: var(--bg-color);
+    margin-left: 4rem;
+    font-weight: 700;
+    transition: 0.3s ease;
+
+
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: var(--text-color);
+}
+
+    #menu-icon {
+    font-size: 3.6rem;
+    color: var(--bg-color);
+    cursor: pointer;
+    display: none;
+}
+
+/* Home Section Code */
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-img img{
+    width: 25vw;
+    border-radius: 50%;
+    box-shadow: 0 0 25px var(--main-color);
+    cursor: pointer;
+    animation: floatImage 4s ease-in-out infinite;
+    transition: 0.4s ease;
+    
+}
+
+.home-img img:hover {
+    box-shadow: 0 0 25px var(--main-color),
+                0 0 35px var(--main-color),
+                0 0 45px var(--main-color);
+}   
+/* Edit */
+@keyframes floatImage {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-2.4rem);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}  
+    .home-content {
+        margin-left: 5rem;
+}
+
+   .home-content h3 {
+        font-size: 3.7rem;
+        font-weight: 700;
+}
+    .home-content h3:nth-of-type(2) {
+        margin-bottom: 2rem;
+}
+
+    span {
+        color: var(--main-color);
+}
+    .home-content h1 {
+        font-size: 6rem;
+        font-weight: 700;
+        line-height: 1.3;    
+}
+
+.home-content p {
+    font-size: 1.8rem; /* Ukuran lebih besar (setara 18px) */
+    line-height: 1.6;  /* Jarak antar baris agar tidak rapat */
+    margin: 2rem 0 3rem; /* Spasi atas dan bawah */
+    max-width: 600px;  /* Agar teks tidak terlalu lebar ke samping */
+    color: var(--text-color);
+    text-align: justify;
+}
+
+.social-media a {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 42px;
+        height: 42px;
+        background: transparent;
+        border: 0.2rem solid var(--main-color);
+        border-radius: 50%;
+        font-size: 2rem;
+        color: var(--main-color);
+        margin: 3rem 1.5rem 3rem 0;
+        transition: 0.3s ease;
+}
+.social-media a:hover {
+        transform: scale(1.2) translateY(-10px);
+        background-color: var(--main-color);
+        color: var(--bg-color);
+        box-shadow: 0 0 25px var(--main-color);
+
+}
+
+.btn {
+    display: inline-block;
+        padding: 1rem 2.8rem;
+        background: var(--main-color);
+        border-radius: 4rem;
+        box-shadow: none;
+        font-size: 1.6rem;
+        color: var(--bg-color);
+        letter-spacing: 0.1rem;
+        font-weight: 600;
+        transition: 0.3s ease;
+}
+.btn:hover {
+        box-shadow: 0 0 1.6rem var(--main-color);
+}
+    /* About Section Clean */
+/* About Section */
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--snd-bg-color);
+    text-align: center;
+    padding: 10rem 5% 5rem;
+}
+
+.about-content {
+    max-width: 700px;
+    width: 100%;
+}
+
+/* Heading */
+.about .heading {
+    font-size: 4rem;
+    margin-bottom: 3rem;
+}
+
+/* Video */
+.about-video {
+    width: 100%;
+}
+
+/* Responsive video */
+.video-container {
+    background: #000; /* Memberi warna hitam saat video loading */
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 0 25px rgba(0,0,0,0.1);
+}
+.video-container iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border: 0;
+}
+
+/* Caption */
+.video-caption {
+    margin-top: 1.5rem;
+    font-size: 1.4rem;
+    color: #555;
+}
+
+.video-container:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease;
+}
+/* Service Section Code */
+
+.services h2 {
+    text-align: center;
+    margin-bottom: 5rem;
+    font-size: 4.5rem; /* Ukuran heading diperbesar */
+}
+
+.services-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2.5rem; /* Jarak antar box sedikit diperlebar */
+}
+
+.services-container .services-box {
+    flex: 1 1 30rem;
+    background: var(--snd-bg-color);
+    padding: 4rem 2rem 4rem; /* Padding disesuaikan agar tidak terlalu tinggi */
+    border-radius: 2rem;
+    text-align: center;
+    border: 0.3rem solid transparent; /* Border transparan default */
+    transition: 0.4s ease;
+    box-shadow: 0 0.5rem 1.5rem rgba(0,0,0,0.1); /* Tambah shadow halus */
+}
+
+.services-container .services-box:hover {
+    border-color: var(--main-color);
+    transform: translateY(-10px); /* Efek melayang saat hover */
+    background: var(--bg-color); /* Berubah putih saat di-hover agar kontras */
+}
+
+.services-box i {
+    font-size: 7rem;
+    color: var(--main-color);
+}
+
+.services-box h3 {
+    font-size: 2.8rem; /* Ukuran judul service */
+    margin: 1.5rem 0;
+    font-weight: 700;
+}
+
+.services-box p {
+    font-size: 1.6rem; /* Ini setara 16px */
+    margin-bottom: 3rem;
+    line-height: 1.6; /* Jarak baris agar tidak rapat */
+    color: #444; /* Warna teks sedikit lebih lembut */
+    padding: 0 1rem;
+}
+
+/* Pastikan tombol di dalam box terlihat jelas */
+.services-box .btn {
+    padding: 0.8rem 2.5rem;
+    font-size: 1.4rem;
+}
+
+@media (max-width: 768px) {
+    .services-container .services-box {
+        flex: 1 1 100%; /* Kartu memenuhi lebar layar di HP */
+    }
+}
+/* ===== Portfolio Section ===== */
+.portfolio {
+    padding: 10rem 9% 5rem; /* selaras dengan section lain */
+    background: var(--snd-bg-color);
+    color: var(--text-color);
+}
+
+.portfolio .section-title {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.portfolio .section-title h2 {
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+.portfolio .section-title p {
+    font-size: 1.6rem;
+    color: #333;
+}
+
+/* Filter buttons */
+#portfolio-flters {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 5rem;
+    padding: 0;
+}
+
+#portfolio-flters li {
+    cursor: pointer;
+    padding: 0.6rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    color: var(--main-color);
+    border: 2px solid var(--main-color);
+    transition: all 0.3s ease;
+}
+
+#portfolio-flters li.filter-active,
+#portfolio-flters li:hover {
+    background-color: var(--main-color);
+    color: var(--bg-color);
+}
+
+/* Portfolio items */
+.portfolio-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem; /* Memperkecil jarak antar box agar terlihat lebih compact */
+    justify-content: center;
+}
+
+.portfolio-item {
+    /* Kita gunakan flex-basis sekitar 350px (35rem) agar lebih solid */
+    flex: 0 1 35rem; 
+    /* Hilangkan 'flex-grow' (angka pertama jadi 0) supaya box tidak melar sendirian */
+    
+    position: relative;
+    overflow: hidden;
+    border-radius: 1.5rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    
+    /* Memberikan tinggi yang konsisten agar box seragam */
+    height: 25rem; 
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Penting! Supaya gambar tidak gepeng saat box dikecilkan */
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.portfolio-item:hover img {
+    transform: scale(1.1);
+}
+
+.portfolio-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 91, 150, 0.85);
+    color: #fff;
+    padding: 2rem;
+    opacity: 0;
+    transition: 0.4s ease;
+    text-align: center;
+    border-bottom-left-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+}
+
+.portfolio-item:hover .portfolio-info {
+    opacity: 1;
+}
+
+.portfolio-info h4 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.portfolio-info p {
+    font-size: 1.4rem;
+    font-style: italic;
+}
+
+.portfolio-links a {
+    font-size: 1.8rem;
+    color: #fff;
+    margin: 0 0.5rem;
+    transition: 0.3s;
+}
+
+.portfolio-links a:hover {
+    color: var(--main-color);
+    transform: scale(1.2);
+}
+
+/* Contact Section Perbaikan */
+.contact {
+    background: var(--bg-color);
+    padding: 10rem 9% 10rem; /* Tambah padding bawah agar tidak mepet footer */
+}
+
+.contact .heading {
+    font-size: 4.5rem; /* Pastikan heading sama besarnya dengan Services */
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.contact-container {
+    max-width: 80rem; /* Membatasi lebar form agar tidak terlalu melebar */
+    margin: 0 auto;
+}
+
+.contact form .input-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1.5rem; /* Tambah gap antar input */
+}
+
+.contact form .input-box input,
+.contact form textarea {
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem; /* Pastikan font kembali ke 16px */
+    color: var(--text-color);
+    background: var(--snd-bg-color);
+    border-radius: 1rem;
+    margin: 0.5rem 0;
+}
+
+.contact form .input-box input {
+    width: 48%; /* Agar dua input bersandingan rapi */
+}
+
+/* Responsif untuk HP agar input jadi full width */
+@media (max-width: 768px) {
+    .contact form .input-box input {
+        width: 100%;
+    }
+}
+
+/* Update pada bagian Button agar Center */
+.contact form .btn {
+    display: block;          /* Wajib block agar margin auto bekerja */
+    margin: 3rem auto 0;     /* 'auto' kiri-kanan akan mendorong tombol ke tengah */
+    width: fit-content;      /* Tombol hanya selebar teksnya saja */
+    cursor: pointer;
+    padding: 1.2rem 4rem;    /* Padding agar tombol terlihat proporsional */
+}
+
+
+/* Footer */
+
+.footer {
+    box-shadow: 0 -5px 20px rgba(0,0,0,0.05);
+    position: fixed;
+    width: 100%;
+    padding: 40px 0;
+    background-color: var(--snd-bg-color);
+}
+
+/* Social icons container */
+.footer .social {
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+/* Icon styling */
+.footer .social a {
+    font-size: 20px;
+    color: var(--main-color);
+    border: 2px solid var(--main-color);
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    display: inline-block;
+    text-align: center; /* FIX dari end ke center */
+    border-radius: 50%;
+    margin: 0 10px;
+    transition: 0.3s ease;
+}
+
+/* Hover effect */
+.footer .social a:hover {
+    transform: scale(1.2) translateY(-10px);
+    background-color: var(--main-color);
+    color: var(--bg-color);
+    box-shadow: 0 0 20px var(--main-color);
+}
+
+/* Copyright text */
+.footer .copyright {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: var(--text-color);
+}
+
+/* --- PERBAIKAN BACK TO TOP --- */
+.back-to-top {
+    position: fixed !important; /* Wajib fixed untuk melayang */
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: var(--main-color);
+    color: var(--bg-color);
+    border-radius: 50%;
+    display: flex !important; /* Flex untuk center icon */
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    z-index: 9999; /* Pastikan angka ini lebih tinggi dari header/footer */
+    
+    /* Keadaan awal (Sembunyi) */
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(20px);
+    transition: all 0.4s ease-in-out;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Class yang dipicu JS saat scroll */
+.back-to-top.show-btn {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+.back-to-top:hover {
+    background: var(--text-color);
+    transform: translateY(-5px);
+    color: var(--bg-color);
+}
+
+/* Animasi transisi halaman */
+.page-transition {
+    filter: blur(10px);
+    opacity: 0;
+    transition: all 0.6s ease;
+}
+
+.page-transition.active {
+    filter: blur(0);
+    opacity: 1;
+}

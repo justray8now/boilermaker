@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Boxicons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.png">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Typed.js -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+    <title>Rey Yuwana - Portfolio</title>
+</head>
+<body>
+
+    
+    <!-- Header -->
+    <header class="header">
+        <a href="#home" class="logo">Rey</a>
+        <i class="bx bx-menu" id="menu-icon"></i>
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section class="home" id="home">
+        <div class="home-img">
+            <img src="assets/profile1.jpeg" alt="Profile Image">
+        </div>
+
+        <div class="home-content">
+            <h3>Hello there!</h3>
+            <h1>It's Rahmat Yuwana (Rey).</h1>
+            <h3>And I'm a <span class="multiple-text"></span></h3>
+            <p>Trade-qualified Welder and Fabricator with over 3 years of hands-on welding experience across
+                industrial and fabrication environments, supported by extensive FIFO site exposure. Competent in
+                GMAW (MIG/MAG), SMAW, GTAW, and FCAW, including plate welding and positional welding.</p>
+
+            <div class="social-media">
+    <a href="https://www.linkedin.com/in/rahmatagengyuwana/" target="_blank" rel="noopener noreferrer">
+        <i class='bx bxl-linkedin'></i>
+    </a>
+    
+    <a href="https://wa.me/61491118689" target="_blank" rel="noopener noreferrer">
+        <i class='bx bxl-whatsapp'></i>
+    </a>
+    
+    <a href="mailto:rahmatagengyuwana@gmail.com" target="_blank" rel="noopener noreferrer">
+        <i class='bx bxl-gmail'></i>
+    </a>
+    
+    <a href="https://www.instagram.com/timelessrey" target="_blank" rel="noopener noreferrer">
+        <i class='bx bxl-instagram'></i>
+    </a>
+</div>
+            <a href="https://drive.google.com/drive/folders/1Jf5osm_7QNACtwMkKfN76st-qbNnZAMi?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn">Download CV</a>
+        </div>
+        
+    </section>
+<!-- About section code -->
+<!-- About Section Clean dengan Video -->
+<section class="about" id="about">
+    <div class="about-content">
+        <h2 class="heading">Short <span>clips of work</span></h2>
+
+        <div class="about-video">
+            <div class="video-container">
+                <iframe 
+                    src="https://www.youtube.com/embed/lPcD4IOo-PI?autoplay=1&mute=1&loop=1&playlist=lPcD4IOo-PI&controls=1"
+                    title="Portfolio Video"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+            </iframe>
+            </div>
+
+            <p class="video-caption">
+                40s introduction & project showcase
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Services Section Code -->
+<section class="services" id="services">
+    <h2 class="heading">My <span>Services</span></h2>
+
+<div class="services-container">
+
+    <div class="services-box">
+            <i class="bx bx-hard-hat"></i>
+            <h3>Boilermaker & Fabrication</h3>
+            <p>Expert in 1G-6G positional welding and precision fabrication, ensuring high dimensional accuracy and full WPS compliance.</p>
+            <a href="https://drive.google.com/drive/folders/1d1xvF-YA6YBFkrWHYEK2MjVaAtx4_W6N?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn">Read More</a>
+        </div>
+
+    <div class="services-box">
+        <i class="bx bx-map-pin"></i>
+        <h3>FIFO Operational</h3>
+        <p>Proven capability in navigating demanding FIFO and DIDO rosters across remote industrial and mine sites in Australia and Indonesia.</p>
+    <a href="https://drive.google.com/drive/folders/1Jf5osm_7QNACtwMkKfN76st-qbNnZAMi?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn">Read More</a>
+    </div>
+
+    
+    <div class="services-box">
+        <i class="bx bx-cog"></i>
+        <h3>Industrial Equipment Operation</h3>
+        <p>Competency in operating heavy equipment such as forklifts, telehandlers, and skid-steer loaders (bobcats).</p>
+    <a href="https://drive.google.com/drive/folders/1pkdIytbuudKgQxozFIudA-MPZnVXXmIC?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn">Read More</a>
+    </div>
+
+</div>
+
+</section>  
+
+<!-- Contact Section Code -->
+<section class="contact" id="contact">
+    <h2 class="heading">Contact <span>Me</span></h2>
+    <div class="contact-container">
+    <form onsubmit="sendEmail(event)">
+    <div class="input-box">
+        <input type="text" id="name" placeholder="Full Name" required>
+        <input type="email" id="email" placeholder="Email Address" required>
+    </div>
+
+    <div class="input-box">
+        <input type="text" id="phone" placeholder="Phone Number">
+        <input type="text" id="subject" placeholder="Subject Email">
+    </div>
+
+    <textarea id="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
+
+    <input type="submit" value="Send Message" class="btn">
+</form>
+</div>
+</section>
+
+<!--Footer (hanya untuk footer konten, kalau ada) -->
+    <footer class="footer">
+        <div class="social">
+        <a href="https://www.linkedin.com/in/rahmatagengyuwana/" target="_blank" rel="noopener noreferrer"><i class='bx bxl-linkedin'></i></a>
+        <a href="https://wa.me/61491118689" target="_blank" rel="noopener noreferrer"><i class='bx bxl-whatsapp'></i></a>
+        <a href="mailto:rahmatagengyuwana@gmail.com" target="_blank" rel="noopener noreferrer"><i class='bx bxl-gmail'></i></a>
+        <a href="https://www.instagram.com/timelessrey" target="_blank" rel="noopener noreferrer"><i class='bx bxl-instagram'></i></a>
+        </div>
+        <p class="copyright">
+        &copy; 2026 Rey Yuwana. All rights reserved.
+    </p>
+    </footer>
+    
+<a href="#" class="back-to-top">
+    <i class='bx bx-up-arrow-alt'></i>
+</a>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+
+    
+    <script>
+document.addEventListener('DOMContentLoaded', () => {
+    const body = document.querySelector('body');
+    body.classList.add('page-transition', 'active'); // animasi fade in
+
+    const links = document.querySelectorAll('a[href]');
+    links.forEach(link => {
+        // hanya link internal
+        if(link.hostname === window.location.hostname){
+            link.addEventListener('click', (e) => {
+                const href = link.getAttribute('href');
+                if(href.startsWith('#') || href === window.location.pathname) return;
+
+                e.preventDefault();
+                body.classList.remove('active'); // fade out
+                setTimeout(() => {
+                    window.location.href = href; // pindah page setelah fade out
+                }, 400); // delay harus sedikit lebih kecil dari transition
+            });
+        }
+    });
+});
+</script>
+    <script>
+        const bttButton = document.querySelector('.back-to-top');
+
+        window.addEventListener('scroll', () => {
+            // Munculkan tombol jika scroll lebih dari 300px
+            if (window.scrollY > 300) {
+                bttButton.classList.add('show-btn');
+            } else {
+                bttButton.classList.remove('show-btn');
+            }
+        });
+
+        // Klik untuk kembali ke atas dengan smooth
+        bttButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</body>
+</html>
